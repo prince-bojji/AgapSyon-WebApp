@@ -1,11 +1,11 @@
-import './App.css';
-import Hours_Location from './pages/Hours_Location';
+import Maps from './pages/Maps';
 import WeatherUpdate from './pages/WeatherUpdate';
+import Landing from './pages/Landing';
 
 function App() {
   return (
     <>
-      <WeatherUpdate/>
+      <Landing />
     </>
   )
 }

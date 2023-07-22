@@ -3,15 +3,6 @@ import { useEffect, useState } from "react";
 import "./WeatherUpdate.css";
 
 function WeatherUpdate() {
-useEffect(() => {
-    document.body.style.background = 'linear-gradient(to right, #FFEDCC, #BFCFFF)';
-    document.body.style.height = '100vh';
-    return () => {
-        document.body.style.background = null;
-        document.body.style.height = null;
-    }
-    }, []);
-
   const [cityName, setCityName] = useState("Caloocan City");
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
