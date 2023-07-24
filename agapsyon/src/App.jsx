@@ -5,11 +5,12 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import AdminLogin from './pages/AdminLogin';
 import Guides from './pages/Guides';
+import Hotlines from './pages/Hotlines';
 
 function App() {
   return (
     <>
-      <WeatherUpdate />
+      <Hotlines />
     </>
   );
 }
