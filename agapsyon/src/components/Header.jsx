@@ -39,8 +39,8 @@ const Header = () => {
     
     return (
     <header 
-        className={`top-0 left-0 z-30 w-full transition-all duration-300 bg-[#a8c9df] font-montserrat text-[#5d7468]
-        ${scrollPosition > 30 ? 'shadow-lg fixed lg:sticky' : 'sticky'}`}
+        className={`fixed lg:sticky top-0 left-0 z-30 w-full transition-all duration-300 bg-[#a8c9df] font-montserrat text-[#5d7468]
+        ${scrollPosition > 30 && 'shadow-lg'}`}
     >
         <nav className='flex flex-wrap justify-between items-center px-4 py-4'>
             <Link to='/Home' className='flex font-unbounded items-center gap-5'>

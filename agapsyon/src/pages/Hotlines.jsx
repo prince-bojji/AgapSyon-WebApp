@@ -65,7 +65,7 @@ function Hotlines() {
   
     return (
       <>
-        <h1 className='text-5xl font-bold mx-auto mt-10 mb-10 text-center text-[#5d7468]'>Hotlines</h1>
+        <h1 className='text-5xl font-bold mx-auto pt-10 mb-10 text-center text-[#5d7468]'>Hotlines</h1>
         <div className='grid font-montserrat grid-cols-1 md:grid-cols-5 gap-4 mb-10 mx-5'>
           {hotlines.map((hotline, index) => (
             <div key={index} className='flex flex-col items-center p-4 rounded-md'>

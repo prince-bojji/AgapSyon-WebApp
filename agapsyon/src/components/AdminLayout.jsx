@@ -5,7 +5,7 @@ const AdminLayout = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="mt-[72px]"><Outlet /></div>
     </>
   );
 };
