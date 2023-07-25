@@ -66,7 +66,7 @@ function SignUp() {
   return (
     <div className='flex flex-col font-montserrat md:flex-row h-screen m-0 p-0 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
     {/* Left side */}
-    <div className='w-full md:w-1/2 h-full flex flex-col items-center p-10'>
+    <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center p-10'>
       <img
         src='/src/images/logo.png'
         alt='Logo'
@@ -79,7 +79,7 @@ function SignUp() {
     </div>
 
     {/* Right side */}
-    <div className='w-full md:w-1/2 h-full bg-gray-200 flex flex-col items-center p-2'>
+    <div className='w-full md:w-1/2 h-full bg-gray-200 flex flex-col justify-center items-center p-2'>
       <form
         onSubmit={onSubmit}
         className='w-full space-y-4 flex flex-col items-center'>

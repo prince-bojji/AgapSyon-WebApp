@@ -15,8 +15,8 @@ function Maps() {
   const [selects, setSelects] = useState('');
 
   return (
-    <div className='lg:flex flex-col justify-center font-montserrat py-28 px-5 min-h-screen'>
-      <p className='text-center font-bold text-[#E79898] text-5xl mb-10'>
+    <div className='lg:flex flex-col justify-center font-montserrat p-10 pb-20 min-h-screen'>
+      <p className='text-center font-bold text-[#5D7468] text-5xl mb-5'>
         Maps
       </p>
       <h1 className='text-center mb-6'>Look for the nearest evacuation site around you:</h1>

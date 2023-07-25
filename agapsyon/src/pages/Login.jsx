@@ -43,7 +43,7 @@ function Login() {
   return (
     <div className='flex flex-col font-montserrat md:flex-row h-screen bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-0'>
       {/* Left side */}
-      <div className='w-full md:w-1/2 h-full flex flex-col items-center p-10'>
+      <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center p-10'>
         <img
           src='/src/images/logo.png'
           alt='Logo'

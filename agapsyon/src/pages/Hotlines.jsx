@@ -64,15 +64,18 @@ function Hotlines() {
     }, []);
   
     return (
-      <div className='grid font-montserrat grid-cols-1 md:grid-cols-5 gap-4'>
-        {hotlines.map((hotline, index) => (
-          <div key={index} className='flex flex-col items-center p-4 rounded-md'>
-            <img src={`src/images/hotlines/${hotline.logo}`} alt={hotline.title} className='w-16 h-16 mb-2'/>
-            <h3 className='mb-2 font-semibold text-center'>{hotline.title}</h3>
-            <p className='text-center'>{hotline.contactInformation}</p>
-          </div>
-        ))}
-      </div>
+      <>
+        <h1 className='text-5xl font-bold mx-auto mt-10 mb-10 text-center text-[#5d7468]'>Hotlines</h1>
+        <div className='grid font-montserrat grid-cols-1 md:grid-cols-5 gap-4 mb-10 mx-5'>
+          {hotlines.map((hotline, index) => (
+            <div key={index} className='flex flex-col items-center p-4 rounded-md'>
+              <img src={`src/images/hotlines/${hotline.logo}`} alt={hotline.title} className='w-16 h-16 mb-2'/>
+              <h3 className='mb-2 font-semibold text-center'>{hotline.title}</h3>
+              <p className='text-center'>{hotline.contactInformation}</p>
+            </div>
+          ))}
+        </div>
+      </>
     );
   }
   

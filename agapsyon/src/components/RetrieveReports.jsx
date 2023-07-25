@@ -17,7 +17,7 @@ const RetrieveReports = () => {
   }, []);
 
   return (
-    <div className="min-h-screen font-montserrat bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-0 flex items-center justify-center">
+    <div className="min-h-screen font-montserrat bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-10 flex justify-center">
       <div className="bg-white w-full md:w-4/5 xl:w-3/4 2xl:w-2/3 rounded-lg shadow-lg p-8">
         <h1 className="text-3xl font-bold mb-4">Reports</h1> {/* Add margin-top (mt-8) */}
         <div className="overflow-x-auto">

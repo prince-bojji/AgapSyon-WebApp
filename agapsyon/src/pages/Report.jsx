@@ -43,39 +43,39 @@ function Report() {
 
   return (
     <div className='font-montserrat flex flex-col items-center h-screen bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
-      <h1 className='text-3xl font-bold mt-10 mb-5 text-[#5d7468]'>Submit a Report</h1>
+      <h1 className='text-5xl font-bold mt-10 mb-10 text-[#5d7468]'>Submit a Report</h1>
       <form onSubmit={handleSubmit} className='w-1/2 space-y-4'>
         <input
           type='text'
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder='Name'
-          className='w-full p-2 border border-gray-200 rounded'
+          className='w-full p-2 border border-gray-200 rounded-lg'
         />
         <input
           type='text'
           value={contact}
           onChange={(e) => setContact(e.target.value)}
           placeholder='Contact'
-          className='w-full p-2 border border-gray-200 rounded'
+          className='w-full p-2 border border-gray-200 rounded-lg'
         />
         <input
           type='text'
           value={location}
           onChange={(e) => setLocation(e.target.value)}
           placeholder='Location'
-          className='w-full p-2 border border-gray-200 rounded'
+          className='w-full p-2 border border-gray-200 rounded-lg'
         />
         <textarea
           value={report}
           onChange={(e) => setReport(e.target.value)}
           placeholder='Report'
-          className='w-full p-2 border border-gray-200 rounded'
+          className='w-full p-2 border border-gray-200 rounded-lg resize-none'
           rows='6'
         />
         <button
           type='submit'
-          className='w-half p-2 mx-auto bg-green-500 text-white rounded flex flex-col items-center'>
+          className='w-half p-2 px-5 mx-auto bg-green-500 text-white rounded-full flex flex-col items-center'>
           Submit Report
         </button>
       </form>
