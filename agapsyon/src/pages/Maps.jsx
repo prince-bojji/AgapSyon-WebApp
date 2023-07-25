@@ -15,8 +15,8 @@ function Maps() {
   const [selects, setSelects] = useState('');
 
   return (
-    <div className='font-montserrat p-8 pb-16'>
-      <p className='text-center font-bold text-[#5d7468] text-5xl mb-10'>
+    <div className='lg:flex flex-col justify-center font-montserrat py-28 px-5 min-h-screen'>
+      <p className='text-center font-bold text-[#E79898] text-5xl mb-10'>
         Maps
       </p>
       <h1 className='text-center mb-6'>Look for the nearest evacuation site around you:</h1>
@@ -35,10 +35,10 @@ function Maps() {
       
       {/* Conditionally render the first set of divs */}
       {selects === '' && (
-        <div className='min-h-[calc(100%-_60px)] mx-auto'>
-          <div className='sm:min-w-[80vw] w-9/12 overflow-auto bg-[#9ACEB4] shadow-[0rem_0rem_0_10px_#FFE8E8] mx-auto rounded-[3rem_0]'>
-            <div className='min-h-full text-[#4E4141] text-[1.5em] not-italic text-center mt-12 mb-0 mx-16'>
-              <div className='max-w-full h-[60vh] w-full overflow-hidden mt-0 mb-12 mx-0 min-h-full'>
+        <div className='mx-auto'>
+          <div className='sm:min-w-[70vw] w-[80vw] overflow-auto bg-[#9ACEB4] shadow-[0rem_0rem_0_10px_#FFE8E8] mx-auto p-5 rounded-[3rem_0]'>
+            <div className='min-h-full text-[#4E4141] text-[1.2em] not-italic text-center mt-7 lg:mt-14 mb-0 mx-5 lg:mx-16'>
+              <div className='max-w-full h-[430px] w-full overflow-hidden mt-0 mb-12 mx-0 min-h-full'>
                 <div className='h-full w-full max-w-full min-h-screen'>
                   <iframe
                     className='h-full w-full border-0'
@@ -53,10 +53,10 @@ function Maps() {
 
       {/* Conditionally render the second set of divs */}
       {selects !== '' && (
-        <div className='min-h-[calc(100%-_60px)] mx-auto'>
-          <div className='sm:min-w-[80vw] w-9/12 overflow-auto bg-[#9ACEB4] shadow-[0rem_0rem_0_10px_#FFE8E8] mx-auto rounded-[3rem_0]'>
-            <div className='min-h-full text-[#4E4141] text-[1.5em] not-italic text-center mt-12 mb-0 mx-16'>
-              <div className='max-w-full h-[60vh] w-full overflow-hidden mt-0 mb-12 mx-0 min-h-full'>
+        <div className='mx-auto'>
+          <div className='sm:min-w-[70vw] w-[80vw] overflow-auto bg-[#9ACEB4] shadow-[0rem_0rem_0_10px_#FFE8E8] mx-auto p-5 rounded-[3rem_0]'>
+            <div className='min-h-full text-[#4E4141] text-[1.2em] not-italic text-center mt-7 lg:mt-14 mb-0 mx-5 lg:mx-16'>
+              <div className='max-w-full h-[430px] w-full overflow-hidden mt-0 mb-12 mx-0 min-h-full'>
                 <div className='h-full w-full max-w-full min-h-screen'>
                   <iframe
                     className='h-full w-full border-0'
