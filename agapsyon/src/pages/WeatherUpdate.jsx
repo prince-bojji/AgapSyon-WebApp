@@ -28,7 +28,7 @@ function WeatherUpdate() {
   }, [cityName, error]);
 
   return (
-    <div className='bg_img'>
+    <div className='bg_img font-montserrat'>
       {!loading ? (
         <>
           <h1 className='city'>{data.name}</h1>

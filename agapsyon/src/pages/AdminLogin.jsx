@@ -43,7 +43,7 @@ function AdminLogin() {
   }, []);
 
   return (
-    <div className='flex flex-col md:flex-row h-screen m-0 p-0' style={{ background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)' }}>
+    <div className='flex flex-col font-montserrat md:flex-row h-screen m-0 p-0' style={{ background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)' }}>
       {/* Left side */}
       <div className='w-full md:w-1/2 h-full flex flex-col items-center p-10'>
         <img

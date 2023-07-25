@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const EarthquakeGuides = () => { 
   return (
-    <div className="bg-transparent min-h-screen bg-gradient-to-r from-[#D2B48C] to-[#8B4513]">
+    <div className="bg-transparent font-montserrat min-h-screen bg-gradient-to-r from-[#D2B48C] to-[#8B4513]">
       <header className="bg-[#8B4513] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Earthquake Safety Guide</h1>
       </header>
