@@ -50,12 +50,17 @@ const Footer = () => {
         &copy; 2023 Agapsyon. All rights reserved
       </div>
 
-      <Collapsible title='Title'>
-        To be added...
+      <Collapsible title='Support'>
+        0912 223 7127<br />
+        126 Salvador St. Baesa Caloocan City<br />
+        https://www.facebook.com/profile.php?id=100064010254694
       </Collapsible>
 
-      <Collapsible title='Title'>
-        To be added...
+      <Collapsible title='Developers'>
+        Batang, Jehan S.<br />
+        Mabalot, Jon Ray P.<br />
+        Munsayac, Queencess May I.<br />
+        Suaviso, Job Adrian Q.
       </Collapsible>
     </footer>
   )
