@@ -12,6 +12,7 @@ import Guides from './pages/Guides';
 import Hotlines from './pages/Hotlines';
 import Report from './pages/Report';
 import Layout from './components/Layout';
+import RetrieveReports from './components/RetrieveReports';
 
 const App = () => {
   return (
@@ -28,7 +29,9 @@ const App = () => {
               <Route exact path="/Hotlines" element = {<Hotlines />} />
             </Route>
             <Route exact path="/AdminLogin" element = {<AdminLogin />} />
+            <Route exact path="/RetrieveReports" element = {<RetrieveReports />} />
             <Route exact path="/AdminDashboard" element = {<AdminDashboard />} />
+            <Route exact path="/WeatherUpdate" element = {<WeatherUpdate />} />
             <Route exact path="/UserLogin" element = {<Login/>} />
             <Route exact path="/UserSignUp" element = {<SignUp />} />
             <Route exact path="/Login" element = {<Landing />} />
