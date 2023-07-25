@@ -11,6 +11,12 @@ function Report() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Check if all fields are filled
+    if (!name || !contact || !location || !report) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
     try {
       // Insert the report data to the "reports" collection in Firestore
       const reportsCollectionRef = collection(db, 'reports');

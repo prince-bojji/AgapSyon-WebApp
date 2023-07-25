@@ -32,6 +32,7 @@ function SignUp() {
       // Add the user to the database
       await createUser();
       alert('User created successfully!');
+      navigate('/UserLogin')
     } catch (error) {
       console.error('Error creating user:', error);
       alert('Failed to create user. Please try again.');
@@ -152,8 +153,7 @@ function SignUp() {
         <div className='flex flex-col items-center mt-4'>
           <button
             type='submit'
-            className='w-half p-2 bg-green-500 text-white rounded mt-4'
-            onClick={() => navigate('/UserLogin')}>
+            className='w-half p-2 bg-green-500 text-white rounded mt-4'>
             Sign up
           </button>
           <div className='mt-2 text-blue-500'>
