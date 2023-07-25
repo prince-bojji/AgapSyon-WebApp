@@ -1,22 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { db } from '/src/firebase-config';
+import { collection, getDocs } from 'firebase/firestore';
 
 function Login() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [users, setUsers] = useState([]);
+  const usersCollectionRef = collection(db, "users");
 
-  const onSubmit = e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    // Add form validation and submission
+
+    // Check if the email and password match any user in the database
+    const matchingUser = users.find(
+      (user) => user.email === email && user.password === password
+    );
+
+    if (matchingUser) {
+      // User found, proceed with login logic
+      console.log('Login successful!');
+      // Add your login logic here, e.g., setting a login state in your app
+    } else {
+      // User not found, show error message
+      console.log('Invalid credentials. Please try again.');
+      // You can add a state variable to show an error message on the UI if needed.
+    }
   };
 
   useEffect(() => {
-    document.body.style.background =
-      'linear-gradient(to right, #FFEDCC, #BFCFFF)';
-    document.body.style.height = '100vh';
-    return () => {
-      document.body.style.background = null;
-      document.body.style.height = null;
+    // Read users data from the database
+    const getUsers = async () => {
+      const data = await getDocs(usersCollectionRef);
+      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
+
+    getUsers();
   }, []);
 
   return (
@@ -35,14 +53,12 @@ function Login() {
 
       {/* Right side */}
       <div className='w-full md:w-1/2 h-full bg-gray-200 flex flex-col items-center justify-center p-10'>
-        <form
-          onSubmit={onSubmit}
-          className='w-full space-y-4 flex flex-col items-center'>
+        <form onSubmit={onSubmit} className='w-full space-y-4 flex flex-col items-center'>
           <input
             name='email'
             type='email'
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder='Email address'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
@@ -50,14 +66,12 @@ function Login() {
             name='password'
             type='password'
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder='Password'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
           <div className='flex flex-col items-center mt-4'>
-            <button
-              type='submit'
-              className='w-half p-2 bg-green-500 text-white rounded mt-4'>
+            <button type='submit' className='w-half p-2 bg-green-500 text-white rounded mt-4'>
               Login
             </button>
             <div className='mt-4 text-blue-500'>

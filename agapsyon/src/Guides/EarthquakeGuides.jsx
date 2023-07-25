@@ -1,18 +1,8 @@
 import React, { useEffect } from 'react';
 
-const EarthquakeGuides = () => {
-    useEffect(() => {
-        document.body.style.background =
-          'linear-gradient(to right, #D2B48C, #8B4513)';
-        document.body.style.height = '100vh';
-        return () => {
-          document.body.style.background = null;
-          document.body.style.height = null;
-        };
-      }, []);
-      
+const EarthquakeGuides = () => { 
   return (
-    <div className="bg-transparent min-h-screen">
+    <div className="bg-transparent min-h-screen bg-gradient-to-r from-[#D2B48C] to-[#8B4513]">
       <header className="bg-[#8B4513] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Earthquake Safety Guide</h1>
       </header>
@@ -42,9 +32,9 @@ const EarthquakeGuides = () => {
           </ul>
         </section>
       </main>
-      <footer className="bg-[#8B4513] text-white py-2 text-center mt-8">
+      {/* <footer className="bg-[#8B4513] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Earthquake Safety Guide</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
