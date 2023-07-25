@@ -1,8 +1,16 @@
 import React from 'react';
+import WeatherUpdate from './WeatherUpdate';
+import HeaderAdmin from '/src/components/HeaderAdmin';
+import RetrieveReports from '/src/components/RetrieveReports';
+
 
 function AdminDashboard() {
   return (
-    <div>AdminDashboard</div>
+    <>
+      <HeaderAdmin />
+      <WeatherUpdate />
+      <RetrieveReports />
+    </>
   )
 }
 
