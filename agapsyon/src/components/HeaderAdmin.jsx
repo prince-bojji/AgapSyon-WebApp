@@ -44,7 +44,7 @@ const HeaderAdmin = () => {
         ${scrollPosition > 30 ? 'shadow-lg fixed' : 'sticky'}`}
     >
       <nav className='flex flex-wrap justify-between items-center px-4 py-4'>
-        <Link to='/' className='flex font-unbounded items-center gap-5'>
+        <Link to='/WeatherUpdate' className='flex font-unbounded items-center gap-5'>
           <img className='h-10 max-h-full w-auto' src={logo} alt='Logo' />
           <h1 className='text-lg'>Agapsyon</h1>
         </Link>

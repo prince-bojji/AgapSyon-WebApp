@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = () => {
+const UserLayout = () => {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default UserLayout;
