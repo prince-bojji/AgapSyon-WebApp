@@ -1,15 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { db } from '/src/firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
 function AdminLogin() {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPrompt, setShowPrompt] = useState(false); // State variable to control prompt display
   const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if the email and password are not empty
+    if (!email || !password) {
+      alert('Please fill in both email and password.');
+      return;
+    }
 
     // Fetch the admin data from the database
     const adminsCollectionRef = collection(db, 'admin');
@@ -23,13 +30,12 @@ function AdminLogin() {
 
     if (matchingAdmin) {
       // Admin found, proceed with admin login logic
-      
       console.log('Admin login successful!');
       // Add your admin login logic here, e.g., setting an admin login state in your app
+      navigate('/WeatherUpdate'); // Navigate to the WeatherUpdate page after successful login
     } else {
-      // Admin not found, show error message
-      console.log('Invalid admin credentials. Please try again.');
-      // You can add a state variable to show an error message on the UI if needed.
+      // Admin not found, show prompt
+      setShowPrompt(true);
     }
   };
 
@@ -78,12 +84,16 @@ function AdminLogin() {
             placeholder='Password'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
+          {showPrompt && (
+            <p className='text-red-500'>
+              Username and password don't match. Please try again.
+            </p>
+          )}
           <div className='flex flex-col items-center mt-4'>
             <button
               type='submit'
               className='w-half p-2 bg-green-500 text-white rounded mt-4'
-              onClick={() => navigate('/AdminDashboard')}
-              >
+            >
               Sign in
             </button>
           </div>
