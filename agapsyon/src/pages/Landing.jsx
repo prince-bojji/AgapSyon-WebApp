@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Landing() {
+  const navigate = useNavigate();
+
   return (
-    <div className='flex h-screen bg-gray-200 m-0 p-0'>
+    <div className='flex h-screen bg-gray-200 m-0 p-0 font-unbounded'>
       {/* Left side */}
       <div className='w-full md:w-2/5 h-full flex flex-col items-center p-10'>
         <img
@@ -15,10 +18,10 @@ function Landing() {
         </h1>
         <div className='flex flex-col justify-center items-center space-y-0 mt-auto mb-auto'>
           <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-10'>
-            <button className='w-[200px] h-[70px] px-5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700 m-0'>
+            <button className='w-[200px] h-[70px] px-5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700 m-0' onClick={() => navigate('/UserLogin')}>
               User
             </button>
-            <button className='w-[200px] h-[70px] px-5 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 m-0'>
+            <button className='w-[200px] h-[70px] px-5 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 m-0' onClick={() => navigate('/AdminLogin')}>
               Admin
             </button>
           </div>

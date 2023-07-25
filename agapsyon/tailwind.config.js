@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         courgette: ['Courgette', 'cursive'],
+        unbounded: ['Unbounded'],
       },
     },
   },
