@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '/src/firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [users, setUsers] = useState([]);
   const usersCollectionRef = collection(db, "users");
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +46,8 @@ function Login() {
         <img
           src='/src/images/logo.png'
           alt='Logo'
-          className='h-[225px] w-[225px] m-0 mt-[20px] self-center'
+          className='h-[225px] w-[225px] m-0 mt-[20px] self-center cursor-pointer'
+          onClick={() => navigate('/Login')}
         />
         <h1 className='text-2xl md:text-3xl font-bold m-0 mt-5 text-center'>
           AgapSyon: Paghanda at Pag-aksyon sa mga Sakuna
@@ -71,11 +74,11 @@ function Login() {
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
           <div className='flex flex-col items-center mt-4'>
-            <button type='submit' className='w-half p-2 bg-green-500 text-white rounded mt-4'>
+            <button type='submit' className='w-half p-2 bg-green-500 text-white rounded mt-4' onClick={() => navigate('/')}>
               Login
             </button>
             <div className='mt-4 text-blue-500'>
-              <a href='/signup'>Don't have an account? Sign up</a>
+              <Link to='/UserSignUp'>Don't have an account? Sign up</Link>
             </div>
           </div>
         </form>
