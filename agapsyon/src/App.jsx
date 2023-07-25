@@ -10,7 +10,7 @@ import Hotlines from './pages/Hotlines';
 function App() {
   return (
     <>
-      <Hotlines />
+      <Maps />
     </>
   );
 }

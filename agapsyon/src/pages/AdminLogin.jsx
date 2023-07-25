@@ -1,12 +1,33 @@
 import React, { useEffect } from 'react';
+import { db } from '/src/firebase-config';
+import { collection, getDocs } from 'firebase/firestore';
 
 function AdminLogin() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const onSubmit = e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    // Add form validation and submission
+
+    // Fetch the admin data from the database
+    const adminsCollectionRef = collection(db, 'admin');
+    const adminData = await getDocs(adminsCollectionRef);
+    const admins = adminData.docs.map((doc) => doc.data());
+
+    // Check if the provided email and password match any admin's credentials
+    const matchingAdmin = admins.find(
+      (admin) => admin.email === email && admin.password === password
+    );
+
+    if (matchingAdmin) {
+      // Admin found, proceed with admin login logic
+      console.log('Admin login successful!');
+      // Add your admin login logic here, e.g., setting an admin login state in your app
+    } else {
+      // Admin not found, show error message
+      console.log('Invalid admin credentials. Please try again.');
+      // You can add a state variable to show an error message on the UI if needed.
+    }
   };
 
   useEffect(() => {
@@ -19,7 +40,7 @@ function AdminLogin() {
   }, []);
 
   return (
-    <div className='flex flex-col md:flex-row h-screen m-0 p-0' style={{background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)'}}>
+    <div className='flex flex-col md:flex-row h-screen m-0 p-0' style={{ background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)' }}>
       {/* Left side */}
       <div className='w-full md:w-1/2 h-full flex flex-col items-center p-10'>
         <img
@@ -41,7 +62,7 @@ function AdminLogin() {
             name='email'
             type='email'
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder='Email address'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
@@ -49,7 +70,7 @@ function AdminLogin() {
             name='password'
             type='password'
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder='Password'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
