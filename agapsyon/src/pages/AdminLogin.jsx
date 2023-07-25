@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { db } from '/src/firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 function AdminLogin() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -46,7 +48,8 @@ function AdminLogin() {
         <img
           src='/src/images/logo.png'
           alt='Logo'
-          className='h-[225px] w-[225px] m-0 mt-[20px] self-center'
+          className='h-[225px] w-[225px] m-0 mt-[20px] self-center cursor-pointer'
+          onClick={() => navigate('/Login')}
         />
         <h1 className='text-2xl md:text-3xl font-bold m-0 mt-5 text-center'>
           AgapSyon: Paghanda at Pag-aksyon sa mga Sakuna
@@ -77,7 +80,9 @@ function AdminLogin() {
           <div className='flex flex-col items-center mt-4'>
             <button
               type='submit'
-              className='w-half p-2 bg-green-500 text-white rounded mt-4'>
+              className='w-half p-2 bg-green-500 text-white rounded mt-4'
+              onClick={() => navigate('/AdminDashboard')}
+              >
               Sign in
             </button>
           </div>

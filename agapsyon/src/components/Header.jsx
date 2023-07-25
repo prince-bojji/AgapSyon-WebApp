@@ -60,10 +60,16 @@ const Header = () => {
                 ${isOpen ? 'h-max pt-3 lg:pt-0' : 'h-0 lg:h-fit'}`}
             >
                 <MenuItem link="/">Home</MenuItem>
-                <MenuItem link="/">I am Safe</MenuItem>
                 <MenuItem link="/Guides">Guides</MenuItem>
                 <MenuItem link="/Maps">Maps</MenuItem>
+                <MenuItem link="/Report">Report</MenuItem>
                 <MenuItem link="/Hotlines">Hotlines</MenuItem>
+                <MenuItem link="/Login">
+                  <div className='flex justify-center items-center gap-1 text-red-800'>
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    <p>Logout</p>
+                  </div>
+                </MenuItem>
             </ul>
         </nav>
     </header>

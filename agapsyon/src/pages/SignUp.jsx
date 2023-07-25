@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '/src/firebase-config';
+import { useNavigate, Link } from 'react-router-dom';
 
 function SignUp() {
   // State for form fields
@@ -15,6 +16,7 @@ function SignUp() {
   const [date, setDate] = useState(new Date());
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
   // Function to handle form submission
   const onSubmit = async (e) => {
@@ -67,7 +69,8 @@ function SignUp() {
       <img
         src='/src/images/logo.png'
         alt='Logo'
-        className='h-[225px] w-[225px] m-0 mt-[20px] self-center'
+        className='h-[225px] w-[225px] m-0 mt-[20px] self-center cursor-pointer'
+        onClick={() => navigate('/Login')}
       />
       <h1 className='text-2xl md:text-3xl font-bold m-0 mt-5 text-center'>
         AgapSyon: Paghanda at Pag-aksyon sa mga Sakuna
@@ -84,7 +87,7 @@ function SignUp() {
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
           placeholder='First name'
-          className='w-2/3 p-2 border border-gray-200 rounded'
+          className='w-2/3 p-2 border border-gray-200 rounded cursor-pointer'
         />
         <input
           name='middleName'
@@ -149,11 +152,12 @@ function SignUp() {
         <div className='flex flex-col items-center mt-4'>
           <button
             type='submit'
-            className='w-half p-2 bg-green-500 text-white rounded mt-4'>
+            className='w-half p-2 bg-green-500 text-white rounded mt-4'
+            onClick={() => navigate('/UserLogin')}>
             Sign up
           </button>
           <div className='mt-2 text-blue-500'>
-            <a href='/login'>Already have an account? Login</a>
+            <Link to='/UserLogin'>Already have an account? Login</Link>
           </div>
         </div>
       </form>

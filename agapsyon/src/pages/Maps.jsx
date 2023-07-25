@@ -15,8 +15,8 @@ function Maps() {
   const [selects, setSelects] = useState('');
 
   return (
-    <div className='font-montserrat py-28'>
-      <p className='text-center font-bold text-[#E79898] text-5xl mb-10'>
+    <div className='font-montserrat p-8 pb-16'>
+      <p className='text-center font-bold text-[#5d7468] text-5xl mb-10'>
         Maps
       </p>
       <h1 className='text-center mb-6'>Look for the nearest evacuation site around you:</h1>
