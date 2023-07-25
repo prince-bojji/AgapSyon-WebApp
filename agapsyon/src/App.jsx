@@ -17,6 +17,8 @@ import LandslideGuides from './Guides/LandslideGuides';
 import TsunamiGuides from './Guides/TsunamiGuides';
 import TyphoonGuides from './Guides/TyphoonGuides';
 import VolcanicEruptionGuides from './Guides/VolcanicEruptionGuides';
+import Report from './pages/Report';
+
 
 const App = () => {
   return (

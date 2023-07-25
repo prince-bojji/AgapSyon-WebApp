@@ -38,7 +38,7 @@ function Login() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-['linear-gradient(to right, #FFEDCC, #BFCFFF)'] m-0 p-0">
+    <div className="flex flex-col md:flex-row h-screen bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-0">
       {/* Left side */}
       <div className='w-full md:w-1/2 h-full flex flex-col items-center p-10'>
         <img

@@ -2,7 +2,9 @@ import React from 'react';
 
 function Report() {
   return (
-    <div>Report</div>
+    <div>
+      <h1>Landing</h1>
+    </div>
   )
 }
 

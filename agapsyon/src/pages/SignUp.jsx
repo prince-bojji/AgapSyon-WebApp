@@ -61,7 +61,7 @@ function SignUp() {
   }, []);
 
   return (
-    <div className='flex flex-col md:flex-row h-screen m-0 p-0'>
+    <div className='flex flex-col md:flex-row h-screen m-0 p-0 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
     {/* Left side */}
     <div className='w-full md:w-1/2 h-full flex flex-col items-center p-10'>
       <img

@@ -5,9 +5,9 @@ function Landing() {
   const navigate = useNavigate();
 
   return (
-    <div className='flex h-screen bg-gray-200 m-0 p-0 font-unbounded'>
+    <div className='flex h-screen bg-gray-200 m-0 p-0 font-unbounded first-letter:bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
       {/* Left side */}
-      <div className='w-full md:w-2/5 h-full flex flex-col items-center p-10'>
+      <div className='w-full md:w-2/5 h-full flex flex-col items-center p-10 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
         <img
           src='/src/images/logo.png'
           alt='Logo'
