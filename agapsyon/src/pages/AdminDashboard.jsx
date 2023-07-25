@@ -8,7 +8,6 @@ import ShowUsers from '/src/components/ShowUsers';
 function AdminDashboard() {
   return (
     <>
-      <HeaderAdmin />
       <WeatherUpdate />
       <RetrieveReports />
       <ShowUsers />
