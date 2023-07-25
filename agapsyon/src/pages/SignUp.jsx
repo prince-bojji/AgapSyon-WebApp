@@ -13,7 +13,7 @@ function SignUp() {
   const [address, setAddress] = useState('');
   const [contactNumber, setContactNumber] = useState('');
   const [email, setEmail] = useState('');
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(null); 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
