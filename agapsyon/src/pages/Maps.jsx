@@ -54,7 +54,7 @@ function Maps() {
       {/* Conditionally render the second set of divs */}
       {selects !== '' && (
         <div className='mx-auto'>
-          <div className='sm:min-w-[70vw] w-[80vw] overflow-auto bg-[#9ACEB4] shadow-[0rem_0rem_0_5px_#bbd2c7] mx-auto p-5 rounded-[3rem_0]'>
+          <div className='sm:min-w-[70vw] w-[80vw] overflow-auto bg-[#a8c9df] shadow-[0rem_0rem_0_5px_#90a59b] mx-auto p-5 rounded-[3rem_0]'>
             <div className='min-h-full text-[#4E4141] text-[1.2em] not-italic text-center mt-7 lg:mt-14 mb-0 mx-5 lg:mx-16'>
               <div className='max-w-full h-[430px] w-full overflow-hidden mt-0 mb-12 mx-0 min-h-full'>
                 <div className='h-full w-full max-w-full min-h-screen'>
