@@ -1,18 +1,8 @@
 import React, { useEffect } from 'react';
 
-const VolcanicEruptionGuides = () => {
-    useEffect(() => {
-        document.body.style.background =
-          'linear-gradient(to right, #FF5733, #FFC300)';
-        document.body.style.height = '100vh';
-        return () => {
-          document.body.style.background = null;
-          document.body.style.height = null;
-        };
-      }, []);
-      
+const VolcanicEruptionGuides = () => { 
   return (
-    <div className="font-montserrat text-justify min-h-screen">
+    <div className="font-montserrat text-justify min-h-screen bg-gradient-to-r from-[#FF5733] to-[#FFC300]">
       <header className="bg-[#FF5733] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Volcanic Eruption Safety Guide</h1>
       </header>
@@ -42,9 +32,9 @@ const VolcanicEruptionGuides = () => {
           </ul>
         </section>
       </main>
-      <footer className="bg-[#FF5733] text-white py-2 text-center mt-8">
+      {/* <footer className="bg-[#FF5733] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Volcanic Eruption Safety Guide</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

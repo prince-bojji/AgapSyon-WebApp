@@ -1,18 +1,8 @@
 import React, { useEffect } from 'react';
 
 const TyphoonGuides = () => {
-    useEffect(() => {
-        document.body.style.background =
-          'linear-gradient(to right, #2980b9, #6dd5fa)';
-        document.body.style.height = '100vh';
-        return () => {
-          document.body.style.background = null;
-          document.body.style.height = null;
-        };
-      }, []);
-      
   return (
-    <div className="font-montserrat text-justify min-h-screen">
+    <div className="font-montserrat text-justify min-h-screen bg-gradient-to-r from-[#2980b9] to-[#6dd5fa]">
       <header className="bg-[#0071b5] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Typhoon Safety Guide</h1>
       </header>
@@ -42,9 +32,9 @@ const TyphoonGuides = () => {
           </ul>
         </section>
       </main>
-      <footer className="bg-[#0071b5] text-black py-2 text-center mt-8">
+      {/* <footer className="bg-[#0071b5] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Typhoon Safety Guide</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

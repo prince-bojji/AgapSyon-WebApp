@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 
 const TsunamiGuides = () => {
-    useEffect(() => {
-        document.body.style.background =
-          'linear-gradient(to right, #00C9A7, #92F2C7)';
-        document.body.style.height = '100vh';
-        return () => {
-          document.body.style.background = null;
-          document.body.style.height = null;
-        };
-      }, []);
+    // useEffect(() => {
+    //     document.body.style.background =
+    //       'linear-gradient(to right, #00C9A7, #92F2C7)';
+    //     document.body.style.height = '100vh';
+    //     return () => {
+    //       document.body.style.background = null;
+    //       document.body.style.height = null;
+    //     };
+    //   }, []);
       
   return (
-    <div className="font-montserrat text-justify min-h-screen">
+    <div className="font-montserrat text-justify min-h-screen bg-gradient-to-r from-[#00C9A7] to-[#92F2C7]">
       <header className="bg-[#008577] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Tsunami Safety Guide</h1>
       </header>
@@ -42,9 +42,9 @@ const TsunamiGuides = () => {
           </ul>
         </section>
       </main>
-      <footer className="bg-[#008577] text-white py-2 text-center mt-8">
+      {/* <footer className="bg-[#008577] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Tsunami Safety Guide</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

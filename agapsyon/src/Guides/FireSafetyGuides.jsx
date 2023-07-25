@@ -1,18 +1,8 @@
 import React, { useEffect } from 'react';
 
-const FireSafetyGuides = () => {
-    useEffect(() => {
-        document.body.style.background =
-          'linear-gradient(to right, #FFC38B, #FF6B6B)';
-        document.body.style.height = '100vh';
-        return () => {
-          document.body.style.background = null;
-          document.body.style.height = null;
-        };
-      }, []);
-      
+const FireSafetyGuides = () => { 
   return (
-    <div className="font-montserrat text-justify min-h-screen">
+    <div className="font-montserrat text-justify min-h-screen bg-gradient-to-r from-[#FFC38B] to-[#FF6B6B]">
       <header className="bg-[#FF3F1A] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Fire Safety Guide</h1>
       </header>
@@ -42,9 +32,9 @@ const FireSafetyGuides = () => {
           </ul>
         </section>
       </main>
-      <footer className="bg-[#FF3F1A] text-white py-2 text-center mt-8">
+      {/* <footer className="bg-[#FF3F1A] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Fire Safety Guide</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

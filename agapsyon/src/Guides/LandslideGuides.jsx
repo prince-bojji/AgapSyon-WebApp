@@ -1,18 +1,8 @@
 import React, { useEffect } from 'react';
 
-const LandslideGuides = () => {
-    useEffect(() => {
-        document.body.style.background =
-          'linear-gradient(to right, #BCAAA4, #D7CCC8)';
-        document.body.style.height = '100vh';
-        return () => {
-          document.body.style.background = null;
-          document.body.style.height = null;
-        };
-      }, []);
-      
+const LandslideGuides = () => { 
   return (
-    <div className="font-montserrat text-justify min-h-screen">
+    <div className="font-montserrat text-justify min-h-screen bg-gradient-to-r from-[#BCAAA4] to-[#D7CCC8]">
       <header className="bg-[#6D4C41] text-white py-4 text-center">
         <h1 className="text-3xl font-bold">Landslide Safety Guide</h1>
       </header>
@@ -42,9 +32,9 @@ const LandslideGuides = () => {
           </ul>
         </section>
       </main>
-      <footer className="bg-[#6D4C41] text-white py-2 text-center mt-8">
+      {/* <footer className="bg-[#6D4C41] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Landslide Safety Guide</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
