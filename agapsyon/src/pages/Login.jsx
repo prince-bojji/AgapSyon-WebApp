@@ -21,7 +21,7 @@ function Login() {
     if (matchingUser) {
       // User found, show successful login alert
       alert('Login Successful!');
-      navigate('/')
+      navigate('/Home')
       // Add your login logic here, e.g., setting a login state in your app
     } else {
       // User not found, show error message
@@ -48,7 +48,7 @@ function Login() {
           src='/src/images/logo.png'
           alt='Logo'
           className='h-[225px] w-[225px] m-0 mt-[20px] self-center cursor-pointer'
-          onClick={() => navigate('/Login')}
+          onClick={() => navigate('/')}
         />
         <h1 className='text-2xl md:text-3xl font-bold m-0 mt-5 text-center'>
           AgapSyon: Paghanda at Pag-aksyon sa mga Sakuna

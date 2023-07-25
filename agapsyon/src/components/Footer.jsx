@@ -45,7 +45,7 @@ const Footer = () => {
 
   return (
     <footer className='flex flex-col lg:flex-row justify-evenly py-12 px-5 bg-[#a8c9df] font-montserrat text-[#5d7468] text-[0.725rem]'>
-      <div className='px-20 pt-3 lg:pt-0 m-auto lg:m-0 w-fit text-center order-1 lg:-order-1' onClick={() => navigate('/')}>
+      <div className='px-20 pt-3 lg:pt-0 m-auto lg:m-0 w-fit text-center order-1 lg:-order-1' onClick={() => navigate('/Home')}>
         <img src={logo} className='m-auto w-36 max-w-full h-auto pb-5 cursor-pointer' />
         &copy; 2023 Agapsyon. All rights reserved
       </div>

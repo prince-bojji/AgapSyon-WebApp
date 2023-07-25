@@ -40,10 +40,10 @@ const Header = () => {
     return (
     <header 
         className={`top-0 left-0 z-30 w-full transition-all duration-300 bg-[#a8c9df] font-montserrat text-[#5d7468]
-        ${scrollPosition > 30 ? 'shadow-lg fixed' : 'sticky'}`}
+        ${scrollPosition > 30 ? 'shadow-lg fixed lg:sticky' : 'sticky'}`}
     >
         <nav className='flex flex-wrap justify-between items-center px-4 py-4'>
-            <Link to='/' className='flex font-unbounded items-center gap-5'>
+            <Link to='/Home' className='flex font-unbounded items-center gap-5'>
                 <img className='h-10 max-h-full w-auto' src={logo} alt='Logo'/>
                 <h1 className='text-lg'>Agapsyon</h1>
             </Link>
@@ -59,12 +59,12 @@ const Header = () => {
                 className={`flex flex-col lg:flex-row lg:gap-8 lg:w-fit m-0 w-full text-center list-none overflow-hidden transition-all duration-300 ease-in-out 
                 ${isOpen ? 'h-max pt-3 lg:pt-0' : 'h-0 lg:h-fit'}`}
             >
-                <MenuItem link="/">Home</MenuItem>
+                <MenuItem link="/Home">Home</MenuItem>
                 <MenuItem link="/Guides">Guides</MenuItem>
                 <MenuItem link="/Maps">Maps</MenuItem>
                 <MenuItem link="/Report">Report</MenuItem>
                 <MenuItem link="/Hotlines">Hotlines</MenuItem>
-                <MenuItem link="/Login">
+                <MenuItem link="/">
                   <div className='flex justify-center items-center gap-1 text-red-800'>
                     <ion-icon name="log-out-outline"></ion-icon>
                     <p>Logout</p>
