@@ -23,7 +23,7 @@ const MenuLine = () => {
   );
 };
 
-const HeaderAdmin = () => {
+const AdminHeader = () => {
   const [isOpen, setOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(window.scrollY);
 
@@ -64,6 +64,7 @@ const HeaderAdmin = () => {
           <MenuItem link="/Weather">Home</MenuItem>
           <MenuItem link="/Users">Users</MenuItem>
           <MenuItem link="/Reports">Reports</MenuItem>
+          <MenuItem link="/Update">Update</MenuItem>
           <MenuItem link="/">
             <div className='flex justify-center items-center gap-1 text-red-800'>
               <ion-icon name="log-out-outline"></ion-icon>
@@ -76,4 +77,4 @@ const HeaderAdmin = () => {
   );
 };
 
-export default HeaderAdmin;
+export default AdminHeader;

@@ -7,7 +7,7 @@ function Landing() {
   return (
     <div className='flex h-screen font-montserrat bg-gray-200 m-0 p-0 first-letter:bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
       {/* Left side */}
-      <div className='w-full md:w-2/5 h-full flex flex-col items-center p-10 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
+      <div className='w-full md:w-2/5 h-full flex flex-col items-center p-10 drop-shadow-lg z-10 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
         <img
           src='/src/images/logo.png'
           alt='Logo'

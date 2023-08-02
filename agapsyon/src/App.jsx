@@ -1,19 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop'
-import Maps from './pages/Maps';
-import WeatherUpdate from './pages/WeatherUpdate';
-import Landing from './pages/Landing';
-import SignUp from './pages/SignUp';
-import Login from './pages/Login';
-import AdminLogin from './pages/AdminLogin';
-import Guides from './pages/Guides';
-import Hotlines from './pages/Hotlines';
-import Report from './pages/Report';
+import ScrollToTop from './components/ScrollToTop';
 import UserLayout from './components/UserLayout';
 import AdminLayout from './components/AdminLayout';
-import RetrieveReports from './components/RetrieveReports';
-import ShowUsers from './components/ShowUsers';
+import WeatherUpdate from './pages/WeatherUpdate';
+import Landing from './pages/Landing';
+import SignUp from './pages/user/SignUp';
+import Login from './pages/user/Login';
+import AdminLogin from './pages/admin/AdminLogin';
+import Guides from './pages/user/Guides';
+import Maps from './pages/user/Maps';
+import Hotlines from './pages/user/Hotlines';
+import Report from './pages/user/Report';
+import RetrieveReports from './pages/admin/RetrieveReports';
+import ShowUsers from './pages/admin/ShowUsers';
+import AdminUpdate from './pages/admin/AdminUpdate';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
               <Route exact path="/Weather" element = {<WeatherUpdate />} />
               <Route exact path="/Users" element = {<ShowUsers />} />
               <Route exact path="/Reports" element = {<RetrieveReports />} />
+              <Route exact path="/Update" element = {<AdminUpdate />} />
             </Route>
             <Route exact path="/AdminLogin" element = {<AdminLogin />} />
             <Route exact path="/UserLogin" element = {<Login/>} />
