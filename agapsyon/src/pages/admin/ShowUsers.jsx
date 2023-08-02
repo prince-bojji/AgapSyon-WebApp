@@ -18,7 +18,7 @@ const ShowUsers = () => {
 
   return (
     <div className="min-h-screen font-montserrat bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-10 flex items-center justify-center">
-      <div className="bg-white w-full md:w-4/5 xl:w-3/4 2xl:w-2/3 rounded-lg shadow-lg p-8">
+      <div className="bg-white mt-[80px] w-full md:w-4/5 xl:w-3/4 2xl:w-2/3 rounded-lg shadow-lg p-8">
         <h1 className="text-3xl font-bold mb-4">Users</h1>
         <div className="overflow-x-auto">
           <table className="w-full table-auto border-collapse border border-gray-400">

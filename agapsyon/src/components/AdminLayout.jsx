@@ -3,10 +3,10 @@ import Header from './AdminHeader';
 
 const AdminLayout = () => {
   return (
-    <>
-      <Header />
-      <div className="mt-[72px] lg:mt-0"><Outlet /></div>
-    </>
+    <div className='flex flex-col flex-grow h-screen'>
+      <div><Header /></div>
+      <div className="flex-1"><Outlet /></div>
+    </div>
   );
 };
 

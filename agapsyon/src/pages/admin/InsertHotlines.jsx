@@ -35,7 +35,7 @@ function InsertHotlines() {
 
   return (
     <div className="min-h-screen font-montserrat bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-10 flex justify-center">
-      <div className="w-full md:w-4/5 xl:w-3/4 2xl:w-2/3 rounded-lg shadow-lg p-8">
+      <div className="mt-[80px] bg-white h-fit w-full md:w-4/5 xl:w-3/4 2xl:w-2/3 rounded-lg shadow-lg p-8">
         <h1 className="text-3xl text-[#5D7468] font-bold mb-4">Insert Hotlines</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
