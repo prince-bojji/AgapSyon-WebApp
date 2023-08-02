@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import TyphoonGuideImg from '../images/guides/typhoon-guide.png';
 
 const TyphoonGuides = () => {
   return (
@@ -30,6 +31,9 @@ const TyphoonGuides = () => {
             <li>Assist others who may need help.</li>
             <li>Listen to updates from local authorities.</li>
           </ul>
+        </section>
+        <section className="mt-8">
+          <img src={TyphoonGuideImg} alt="Typhoon Safety Guide" className="w-full" />
         </section>
       </main>
       {/* <footer className="bg-[#0071b5] text-white py-2 text-center mt-8">

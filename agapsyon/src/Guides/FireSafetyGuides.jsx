@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import FireSafetyImg from '../images/guides/Sunog-guide.png';
 
 const FireSafetyGuides = () => { 
   return (
@@ -30,6 +31,9 @@ const FireSafetyGuides = () => {
             <li>Remember the PASS method: Pull the pin, Aim at the base of the fire, Squeeze the handle, and Sweep from side to side.</li>
             <li>If the fire is spreading rapidly or too large to control, evacuate immediately.</li>
           </ul>
+        </section>
+        <section className="mt-8">  
+          <img src={FireSafetyImg} alt="Earthquake Safety Guide" className="w-full" />
         </section>
       </main>
       {/* <footer className="bg-[#FF3F1A] text-white py-2 text-center mt-8">

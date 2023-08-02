@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import EarthquakeGuideImg from '../images/guides/earthquake-guide.png';
 
 const EarthquakeGuides = () => { 
   return (
@@ -31,6 +32,10 @@ const EarthquakeGuides = () => {
             <li>Listen to updates from local authorities and follow evacuation orders if necessary.</li>
           </ul>
         </section>
+        <section className="mt-8">  
+          <img src={EarthquakeGuideImg} alt="Earthquake Safety Guide" className="w-full" />
+        </section>
+
       </main>
       {/* <footer className="bg-[#8B4513] text-white py-2 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Earthquake Safety Guide</p>

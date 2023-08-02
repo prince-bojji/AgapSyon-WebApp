@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import TsunamiGuideImg from '../images/guides/tsunami-guide.png';
 
 const TsunamiGuides = () => {
     // useEffect(() => {
@@ -40,6 +41,9 @@ const TsunamiGuides = () => {
             <li>Be cautious of damaged infrastructure and potential hazards in the affected areas.</li>
             <li>Listen to updates from local authorities and follow their instructions.</li>
           </ul>
+        </section>
+        <section className="mt-8">
+          <img src={TsunamiGuideImg} alt="Tsunami Safety Guide" className="w-full" />
         </section>
       </main>
       {/* <footer className="bg-[#008577] text-white py-2 text-center mt-8">

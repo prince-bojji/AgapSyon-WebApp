@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import LandslideGuideImg from '../images/guides/landslide-guide.png';
 
 const LandslideGuides = () => { 
   return (
@@ -30,6 +31,9 @@ const LandslideGuides = () => {
             <li>Check for damage to your property and assess its stability before entering.</li>
             <li>Report any blocked roads, damaged infrastructure, or hazards to local authorities.</li>
           </ul>
+        </section>
+        <section className="mt-8">
+          <img src={LandslideGuideImg} alt="Landslide Safety Guide" className="w-full" />
         </section>
       </main>
       {/* <footer className="bg-[#6D4C41] text-white py-2 text-center mt-8">

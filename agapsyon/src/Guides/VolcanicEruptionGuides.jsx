@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import VolcanicEruptionGuideImg from '../images/guides/volcanic-eruption-guide.png';
 
 const VolcanicEruptionGuides = () => { 
   return (
@@ -30,6 +31,9 @@ const VolcanicEruptionGuides = () => {
             <li>Check your property for ash and debris and clean it up carefully, wearing protective gear.</li>
             <li>Stay tuned to news and advisories for information on when it is safe to return home.</li>
           </ul>
+        </section>
+        <section className="mt-8">
+          <img src={VolcanicEruptionGuideImg} alt="Volcanic Eruption Safety Guide" className="w-full" />
         </section>
       </main>
       {/* <footer className="bg-[#FF5733] text-white py-2 text-center mt-8">
