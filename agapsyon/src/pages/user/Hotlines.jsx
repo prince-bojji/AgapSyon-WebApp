@@ -33,7 +33,7 @@ function Hotlines() {
           <table className="w-full table-auto border-collapse border border-gray-400">
             <thead>
               <tr className="">
-                <th className="p-4 text-center border border-gray-400">Contact</th>
+                <th className="p-4 text-center border border-gray-400">Contact Name</th>
                 <th className="p-4 text-center border border-gray-400">Contact Information</th>
               </tr>
             </thead>
