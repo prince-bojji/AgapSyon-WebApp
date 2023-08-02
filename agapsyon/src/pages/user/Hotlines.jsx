@@ -1,82 +1,55 @@
-import React, { useEffect } from 'react';
-
-const hotlines = [
-  {
-    logo: 'logo_redcross.png',
-    title: 'PHILIPPINE NATIONAL RED CROSS',
-    contactInformation: '143 | 8527 - 0000'
-  },
-  {
-    logo: 'logo_bfr.png',
-    title: 'BUREAU OF FIRE PROTECTION',
-    contactInformation: '(02) 8426 - 0219 | 8426 - 0246'
-  },
-  {
-    logo: 'logo_pnp.png',
-    title: 'PHILIPPINE NATIONAL POLICE',
-    contactInformation: '117 | 8723 - 0401 to 20'
-  },
-  {
-    logo: 'logo_doh.png',
-    title: 'DEPARTMENT OF HEALTH',
-    contactInformation: '8711 - 1001 to 02'
-  },
-  {
-    logo: 'logo_dswd.png',
-    title: 'DEPARTMENT OF SOCIAL WELFARE AND DEVELOPMENT',
-    contactInformation: '8931 - 8101 to 07'
-  },
-  {
-    logo: 'logo_ndrrmc.png',
-    title: 'NATIONAL DISASTER RISK REDUCTION & MANAGEMENT COUNCIL',
-    contactInformation: '8911 - 1406 | 8911 - 2665'
-  },
-  {
-    logo: 'logo_pagasa.png',
-    title: 'PAGASA',
-    contactInformation: '8927 - 1541 | 8926 - 4251'
-  },
-  {
-    logo: 'logo_phivolcs.png',
-    title: 'PHIVOLCS',
-    contactInformation: '8929 - 8958 | 8426 - 1469-79'
-  },
-  {
-    logo: 'logo_dpwh.png',
-    title: 'DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS',
-    contactInformation: '165 - 02'
-  },
-  {
-    logo: 'logo_coastguard.png',
-    title: 'PHILIPPINE COASTGUARD',
-    contactInformation: '(02) 8527 - 3677 | 8527-3880 to 85'
-  }
-];
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '/src/firebase-config';
 
 function Hotlines() {
-    useEffect(() => {
-      document.body.style.background = 'linear-gradient(to right, #FFEDCC, #BFCFFF)';
-      document.body.style.height = '100vh';
-      return () => {
-        document.body.style.background = null;
-        document.body.style.height = null;
-      };
-    }, []);
-  
-    return (
-      <>
-        <h1 className='text-5xl font-bold mx-auto pt-10 mb-10 text-center text-[#5d7468]'>Hotlines</h1>
-        <div className='grid font-montserrat grid-cols-1 md:grid-cols-5 gap-4 mb-10 mx-5'>
-          {hotlines.map((hotline, index) => (
-            <div key={index} className='flex flex-col items-center p-4 rounded-md'>
-              <img src={`src/images/hotlines/${hotline.logo}`} alt={hotline.title} className='w-16 h-16 mb-2'/>
-              <h3 className='mb-2 font-semibold text-center'>{hotline.title}</h3>
-              <p className='text-center'>{hotline.contactInformation}</p>
-            </div>
-          ))}
+  const [hotlines, setHotlines] = useState([]);
+
+  useEffect(() => {
+    // Read data from the "hotlines" collection in the database
+    const getHotlines = async () => {
+      const hotlinesCollectionRef = collection(db, 'hotlines');
+      const data = await getDocs(hotlinesCollectionRef);
+      setHotlines(data.docs.map((doc) => doc.data()));
+    };
+
+    getHotlines();
+  }, []);
+
+  useEffect(() => {
+    document.body.style.background = 'linear-gradient(to right, #FFEDCC, #BFCFFF)';
+    document.body.style.height = '100vh';
+    return () => {
+      document.body.style.background = null;
+      document.body.style.height = null;
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen font-montserrat bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-10 flex justify-center">
+      <div className="w-full md:w-4/5 xl:w-3/4 2xl:w-2/3 rounded-lg shadow-lg p-8">
+        <h1 className="text-3xl text-[#5D7468] font-bold mb-4">Hotlines</h1>
+        <div className="overflow-x-auto">
+          <table className="w-full table-auto border-collapse border border-gray-400">
+            <thead>
+              <tr className="">
+                <th className="p-4 text-center border border-gray-400">Contact</th>
+                <th className="p-4 text-center border border-gray-400">Contact Information</th>
+              </tr>
+            </thead>
+            <tbody>
+              {hotlines.map((hotline, index) => (
+                <tr key={index}>
+                  <td className="p-4 text-center border border-gray-400">{hotline.name}</td>
+                  <td className="p-4 text-center border border-gray-400">{hotline.contact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      </>
-    );
-  }
-  
-  export default Hotlines;
+      </div>
+    </div>
+  );
+}
+
+export default Hotlines;
