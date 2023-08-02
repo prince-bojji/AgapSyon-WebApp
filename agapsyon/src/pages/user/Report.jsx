@@ -48,7 +48,7 @@ function Report() {
   };
 
   return (
-    <div className='font-montserrat flex flex-col items-center h-screen bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
+    <div className='font-montserrat flex flex-col items-center pb-5  bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
       <h1 className='text-5xl font-bold mt-10 mb-10 text-[#5d7468]'>Submit a Report</h1>
       <form onSubmit={handleSubmit} className='w-1/2 space-y-4'>
       <h5>Personal Information</h5>

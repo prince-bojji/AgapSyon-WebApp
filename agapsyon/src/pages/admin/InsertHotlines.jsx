@@ -43,7 +43,7 @@ function InsertHotlines() {
               Contact Name
             </label>
             <input
-              className="w-full border border-gray-400 p-1 rounded-lg focus:outline-none focus:border-[#5D7468]"
+              className="w-full border border-gray-400 p-2 rounded-lg focus:outline-none focus:border-[#5D7468]"
               type="text"
               id="name"
               value={name}
@@ -56,7 +56,7 @@ function InsertHotlines() {
               Contact Information
             </label>
             <input
-              className="w-full border border-gray-400 p-1 rounded-lg focus:outline-none focus:border-[#5D7468]"
+              className="w-full border border-gray-400 p-2 rounded-lg focus:outline-none focus:border-[#5D7468]"
               type="text"
               id="contact"
               value={contact}

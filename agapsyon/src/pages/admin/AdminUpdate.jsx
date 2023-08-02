@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import InsertHotlines from '/src/pages/admin/InsertHotlines';
 
 const AdminUpdate = () => {
   return (
-    <div>AdminUpdate</div>
+    <>
+    <InsertHotlines />
+    </>
   )
 }
 
-export default AdminUpdate
+export default AdminUpdate;
