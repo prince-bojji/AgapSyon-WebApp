@@ -2,7 +2,7 @@
 
 ## About the Project
 
-"AgapSyon: Paghanda at Pag-aksyon sa mga Sakuna”, addresses the Philippines' lack of resources in managing disaster readiness and disaster response. Due to the country's vulnerability to natural calamities, including floods, typhoons, earthquakes, fire, volcanic eruptions, and landslides.
+"AgapSyon: Paghanda at Pag-aksyon sa mga Sakuna”, is a web application that addresses the Philippines' lack of resources in managing disaster readiness and disaster response. Due to the country's vulnerability to natural calamities, including floods, typhoons, earthquakes, fire, volcanic eruptions, and landslides.
 
 AgapSyon aims to provide daily weather updates, guidelines for disaster preparedness, maps of evacuation centers, emergency hotlines, and the Report feature.
 
