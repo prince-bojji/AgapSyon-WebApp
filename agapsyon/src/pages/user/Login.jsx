@@ -19,14 +19,10 @@ function Login() {
     );
 
     if (matchingUser) {
-      // User found, show successful login alert
       alert('Login Successful!');
       navigate('/Home')
-      // Add your login logic here, e.g., setting a login state in your app
     } else {
-      // User not found, show error message
       alert('Invalid credentials. Please try again.');
-      // You can add a state variable to show an error message on the UI if needed.
     }
   };
 

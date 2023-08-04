@@ -5,7 +5,6 @@ import { db } from '/src/firebase-config';
 function Report() {
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
-  // const [location, setLocation] = useState('');
   const [house, setHouse] = useState('');
   const [street, setStreet] = useState('');
   const [block, setBlock] = useState('');

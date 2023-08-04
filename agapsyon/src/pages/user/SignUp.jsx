@@ -22,7 +22,6 @@ function SignUp() {
   const onSubmit = async (e) => {
     e.preventDefault();
     
-    // Add form validation logic here before creating the user
     if (!firstName || !lastName || !address || !email || !password || password !== confirmPassword) {
       alert('Please fill in all required fields and make sure passwords match.');
       return;

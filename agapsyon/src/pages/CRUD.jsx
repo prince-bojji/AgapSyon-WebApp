@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { db } from '/src/firebase-config';
 import { collection, getDocs, addDoc } from 'firebase/firestore';
 
+//This is just for testing
+
 function Temp() {
     const [newfname, setnewfname] = useState("");
     const [newmname, setnewmname] = useState("");
