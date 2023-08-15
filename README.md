@@ -1,6 +1,6 @@
 # AgapSyon-WebApp
 
-![Master Siomai](./agapsyon/src/images/ss.png)
+![Agapsyon](./agapsyon/src/images/ss.png)
 
 ## About the Project
 
