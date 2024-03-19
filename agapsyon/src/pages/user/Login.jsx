@@ -4,8 +4,8 @@ import { collection, getDocs } from 'firebase/firestore';
 import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [users, setUsers] = useState([]);
   const usersCollectionRef = collection(db, 'users');
   const navigate = useNavigate();
@@ -13,21 +13,19 @@ function Login() {
   const onSubmit = async e => {
     e.preventDefault();
 
-    // Check if the email and password match any user in the database
     const matchingUser = users.find(
       user => user.email === email && user.password === password
     );
 
     if (matchingUser) {
       alert('Login Successful!');
-      navigate('/Home')
+      navigate('/Home');
     } else {
       alert('Invalid credentials. Please try again.');
     }
   };
 
   useEffect(() => {
-    // Read users data from the database
     const getUsers = async () => {
       const data = await getDocs(usersCollectionRef);
       setUsers(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
@@ -38,7 +36,6 @@ function Login() {
 
   return (
     <div className='flex flex-col font-montserrat md:flex-row h-screen bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF] m-0 p-0'>
-      {/* Left side */}
       <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center p-10'>
         <img
           src='/src/images/logo.png'
@@ -51,7 +48,6 @@ function Login() {
         </h1>
       </div>
 
-      {/* Right side */}
       <div className='w-full md:w-1/2 h-full bg-gray-200 flex flex-col items-center justify-center p-10'>
         <form
           onSubmit={onSubmit}

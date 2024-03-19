@@ -10,13 +10,13 @@ function Guides() {
   return (
     <>
       <TyphoonGuides />
-      <TsunamiGuides/>
+      <TsunamiGuides />
       <LandslideGuides />
       <EarthquakeGuides />
       <FireSafetyGuides />
       <VolcanicEruptionGuides />
     </>
-  )
+  );
 }
 
 export default Guides;

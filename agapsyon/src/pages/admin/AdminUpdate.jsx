@@ -4,9 +4,9 @@ import InsertHotlines from '/src/pages/admin/InsertHotlines';
 const AdminUpdate = () => {
   return (
     <>
-    <InsertHotlines />
+      <InsertHotlines />
     </>
-  )
-}
+  );
+};
 
 export default AdminUpdate;

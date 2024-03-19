@@ -21,30 +21,30 @@ const App = () => {
     <Router>
       <div className='flex flex-col min-h-screen'>
         <div className='flex-1'>
-          <ScrollToTop/>
+          <ScrollToTop />
           <Routes>
             <Route element={<UserLayout />}>
-              <Route exact path="/Home" element = {<WeatherUpdate />} />
-              <Route exact path="/Guides" element = {<Guides />} />
-              <Route exact path="/Report" element = {<Report />} />
-              <Route exact path="/Maps" element = {<Maps />} />
-              <Route exact path="/Hotlines" element = {<Hotlines />} />
+              <Route exact path='/Home' element={<WeatherUpdate />} />
+              <Route exact path='/Guides' element={<Guides />} />
+              <Route exact path='/Report' element={<Report />} />
+              <Route exact path='/Maps' element={<Maps />} />
+              <Route exact path='/Hotlines' element={<Hotlines />} />
             </Route>
             <Route element={<AdminLayout />}>
-              <Route exact path="/Weather" element = {<WeatherUpdate />} />
-              <Route exact path="/Users" element = {<ShowUsers />} />
-              <Route exact path="/Reports" element = {<RetrieveReports />} />
-              <Route exact path="/Update" element = {<AdminUpdate />} />
+              <Route exact path='/Weather' element={<WeatherUpdate />} />
+              <Route exact path='/Users' element={<ShowUsers />} />
+              <Route exact path='/Reports' element={<RetrieveReports />} />
+              <Route exact path='/Update' element={<AdminUpdate />} />
             </Route>
-            <Route exact path="/AdminLogin" element = {<AdminLogin />} />
-            <Route exact path="/UserLogin" element = {<Login/>} />
-            <Route exact path="/UserSignUp" element = {<SignUp />} />
-            <Route exact path="/" element = {<Landing />} />
+            <Route exact path='/AdminLogin' element={<AdminLogin />} />
+            <Route exact path='/UserLogin' element={<Login />} />
+            <Route exact path='/UserSignUp' element={<SignUp />} />
+            <Route exact path='/' element={<Landing />} />
           </Routes>
         </div>
       </div>
     </Router>
-  )
+  );
 };
 
 export default App;

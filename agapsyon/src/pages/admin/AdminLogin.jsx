@@ -6,38 +6,36 @@ import { useNavigate } from 'react-router-dom';
 function AdminLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showPrompt, setShowPrompt] = useState(false); // State variable to control prompt display
+  const [showPrompt, setShowPrompt] = useState(false);
   const navigate = useNavigate();
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
 
-    // Check if the email and password are not empty
     if (!email || !password) {
       alert('Please fill in both email and password.');
       return;
     }
 
-    // Fetch the admin data from the database
     const adminsCollectionRef = collection(db, 'admin');
     const adminData = await getDocs(adminsCollectionRef);
-    const admins = adminData.docs.map((doc) => doc.data());
+    const admins = adminData.docs.map(doc => doc.data());
 
-    // Check if the provided email and password match any admin's credentials
     const matchingAdmin = admins.find(
-      (admin) => admin.email === email && admin.password === password
+      admin => admin.email === email && admin.password === password
     );
 
     if (matchingAdmin) {
       console.log('Admin login successful!');
-      navigate('/Weather'); // Navigate to the WeatherUpdate page after successful login
+      navigate('/Weather');
     } else {
       setShowPrompt(true);
     }
   };
 
   useEffect(() => {
-    document.body.style.background = 'linear-gradient(to right, #FFEDCC, #BFCFFF)';
+    document.body.style.background =
+      'linear-gradient(to right, #FFEDCC, #BFCFFF)';
     document.body.style.height = '100vh';
     return () => {
       document.body.style.background = null;
@@ -46,8 +44,9 @@ function AdminLogin() {
   }, []);
 
   return (
-    <div className='flex flex-col font-montserrat md:flex-row h-screen m-0 p-0' style={{ background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)' }}>
-      {/* Left side */}
+    <div
+      className='flex flex-col font-montserrat md:flex-row h-screen m-0 p-0'
+      style={{ background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)' }}>
       <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center p-10'>
         <img
           src='/src/images/logo.png'
@@ -60,7 +59,6 @@ function AdminLogin() {
         </h1>
       </div>
 
-      {/* Right side */}
       <div className='w-full md:w-1/2 h-full bg-gray-200 flex flex-col items-center justify-center p-10'>
         <form
           onSubmit={onSubmit}
@@ -69,7 +67,7 @@ function AdminLogin() {
             name='email'
             type='email'
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             placeholder='Email address'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
@@ -77,7 +75,7 @@ function AdminLogin() {
             name='password'
             type='password'
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
             placeholder='Password'
             className='w-2/3 p-2 border border-gray-200 rounded'
           />
@@ -89,8 +87,7 @@ function AdminLogin() {
           <div className='flex flex-col items-center mt-4'>
             <button
               type='submit'
-              className='w-half p-2 bg-green-500 text-white rounded mt-4'
-            >
+              className='w-half p-2 bg-green-500 text-white rounded mt-4'>
               Sign in
             </button>
           </div>

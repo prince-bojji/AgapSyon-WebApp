@@ -31,7 +31,9 @@ function WeatherUpdate() {
     <div className='bg_img font-montserrat'>
       {!loading ? (
         <>
-          <h1 className='city font-semibold text-6xl text-center drop-shadow-lg'>{data.name}</h1>
+          <h1 className='city font-semibold text-6xl text-center drop-shadow-lg'>
+            {data.name}
+          </h1>
           <div className='group'>
             <img
               src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
