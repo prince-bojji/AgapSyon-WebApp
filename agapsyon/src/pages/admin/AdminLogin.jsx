@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '/src/firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../images/logo.png';
+import Logo from '/src/images/logo.png';
 
 function AdminLogin() {
   const [email, setEmail] = useState('');
