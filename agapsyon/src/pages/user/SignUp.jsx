@@ -4,6 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '/src/firebase-config';
 import { useNavigate, Link } from 'react-router-dom';
+import Logo from '../images/logo.png';
 
 function SignUp() {
   const [firstName, setFirstName] = useState('');
@@ -72,7 +73,7 @@ function SignUp() {
     <div className='flex flex-col font-montserrat md:flex-row h-screen m-0 p-0 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
       <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center p-10'>
         <img
-          src='/src/images/logo.png'
+          src={Logo}
           alt='Logo'
           className='h-[225px] w-[225px] m-0 mt-[20px] self-center cursor-pointer'
           onClick={() => navigate('/')}
