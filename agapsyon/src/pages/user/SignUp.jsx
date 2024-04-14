@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '/src/firebase-config';
 import { useNavigate, Link } from 'react-router-dom';
-import Logo from '../images/logo.png';
+import Logo from '/src/images/logo.png';
 
 function SignUp() {
   const [firstName, setFirstName] = useState('');
