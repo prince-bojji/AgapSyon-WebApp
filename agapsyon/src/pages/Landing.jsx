@@ -1,5 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../images/logo.png';
+import Cover from '../images/cover.png';
+
 
 function Landing() {
   const navigate = useNavigate();
@@ -8,7 +11,7 @@ function Landing() {
     <div className='flex h-screen font-montserrat bg-gray-200 m-0 p-0 first-letter:bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
       <div className='w-full md:w-2/5 h-full flex flex-col items-center p-10 drop-shadow-lg z-10 bg-gradient-to-r from-[#FFEDCC] to-[#BFCFFF]'>
         <img
-          src='/src/images/logo.png'
+          src={logo}
           alt='Logo'
           className='h-[225px] w-[225px] m-0 mt-[20px] self-center'
         />
@@ -32,7 +35,7 @@ function Landing() {
       </div>
       <div className='hidden md:block w-3/5 h-full m-0 p-0'>
         <img
-          src='/src/images/cover.png'
+          src={Cover}
           alt='Cover Photo'
           className='object-cover w-full h-full m-0 p-0'
         />
