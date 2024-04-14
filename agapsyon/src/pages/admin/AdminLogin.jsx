@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '/src/firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../images/logo.png';
 
 function AdminLogin() {
   const [email, setEmail] = useState('');
@@ -49,7 +50,7 @@ function AdminLogin() {
       style={{ background: 'linear-gradient(to right, #FFEDCC, #BFCFFF)' }}>
       <div className='w-full md:w-1/2 h-full flex flex-col justify-center items-center p-10'>
         <img
-          src='/src/images/logo.png'
+          src={Logo}
           alt='Logo'
           className='h-[225px] w-[225px] m-0 mt-[20px] self-center cursor-pointer'
           onClick={() => navigate('/')}
